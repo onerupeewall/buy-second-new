@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Buy Second</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">Buy Second</div>
+
+            <nav class="nav">
+
+                <a href="#" class="follow">FOLLOW</a>
+
+                <a href="#">Terms &amp; Conditions</a>
+
+                <a href="#">Privacy Policy</a>
+
+            </nav>
+
+        </header>
+
+
+        <!-- BILLBOARD TIMING -->
+        <div class="timing">
+            RAI SAHAB BILLBOARD live 8am to 10pm
+        </div>
+
+
+        <!-- WARNING -->
+        <div class="warning">
+
+            <strong>Strict Warning:</strong>
+
+            Violation of content guidelines will result in
+            immediate ad rejection and permanent forfeiture
+            of funds with zero refund.
+
+        </div>
+
+
+        <!-- BANNER -->
+        <div class="hero">
+
+            <img src="buy-seconds-banner.png"
+                 alt="Buy Seconds Banner">
+
+        </div>
+
+
+        <!-- ACTIVE CAMPAIGN -->
+        <div class="active-row">
+
+            <span class="no-slots">
+                No Active Slots
+            </span>
+
+            <a href="#" class="active-link">
+                My Active Campaign
+            </a>
+
+        </div>
+
+
+        <!-- BUY BUTTON -->
+        <a href="#" class="buy-button">
+            Buy Your Slot →
+        </a>
+
+
+        <!-- STATISTICS -->
+        <div class="stats">
+
+            <div>
+
+                <strong>👥 VISITORS:</strong>
+
+                <span class="visitors">0</span>
+
+            </div>
+
+            <div>
+
+                <strong>⭐ FOLLOWERS:</strong>
+
+                <span class="followers">0</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AVAILABLE SEATS -->
+        <div class="seats">
+
+            <strong>Total Available Second Seat:</strong>
+
+            <span>85790</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+
+        <div class="popup-box">
+
+            <!-- CLOSE BUTTON -->
+            <button class="popup-close"
+                    id="popupClose"
+                    type="button">
+
+                &times;
+
+            </button>
+
+
+            <!-- POPUP TITLE -->
+            <div class="popup-title" id="popupTitle"></div>
+
+
+            <!-- BOOKING FORM CONTENT -->
+            <div class="popup-content">
+
+
+                <h2 class="booking-heading">
+                    Book Your Advertising Slot
+                </h2>
+
+
+                <!-- 1. BOOKING DATE -->
+                <div class="booking-field">
+
+                    <label>
+                        1. Select Booking Date (Tomorrow or future date):
+                    </label>
+
+                    <input type="date"
+                           class="booking-input">
+
+                </div>
+
+
+
+                <!-- 2. MEDIA UPLOAD -->
+                <div class="booking-field">
+
+                    <label>
+                        2. Upload Advertisement File (Video / Image File - Max 30s):
+                    </label>
+
+                    <input type="file"
+                           class="booking-input file-input"
+                           accept=".mp4,.jpg,.jpeg,.png">
+
+                    <small>
+                        Only .mp4, .jpg, or .png files are accepted.
+                        (Maximum 30 seconds)
+                    </small>
+
+                </div>
+
+
+
+                <!-- 3. DESTINATION LINK -->
+                <div class="booking-field">
+
+                    <label>
+                        3. Destination Link (Target URL):
+                    </label>
+
+                    <input type="url"
+                           class="booking-input"
+                           placeholder="https://yourwebsite.com">
+
+                </div>
+
+
+
+                <!-- 4. ADVERTISEMENT DURATION -->
+                <div class="booking-field">
+
+                    <label>
+                        4. Advertisement Duration &amp; Price (₹10/sec):
+                    </label>
+
+                    <input type="number"
+                           class="booking-input"
+                           value="10"
+                           placeholder="Enter seconds">
+
+                    <div class="total-amount">
+
+                        <strong>Total Amount:</strong> ₹100
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TIMES PER DAY -->
+                <div class="booking-field">
+
+                    <label>
+                        Times per Day (Max 7 Departs):
+                    </label>
+
+                    <input type="number"
+                           class="booking-input"
+                           value="1">
+
+                </div>
+
+
+
+                <!-- NUMBER OF DAYS -->
+                <div class="booking-field">
+
+                    <label>
+                        Number of Days (Max 30):
+                    </label>
+
+                    <input type="number"
+                           class="booking-input"
+                           value="1">
+
+                </div>
+
+
+
+                <!-- 5. BRAND NAME -->
+                <div class="booking-field">
+
+                    <label>
+                        5. Ad Title / Brand Name:
+                    </label>
+
+                    <input type="text"
+                           class="booking-input"
+                           placeholder="e.g. Enter your company or brand name">
+
+                </div>
+
+
+
+                <!-- POLICY AGREEMENT -->
+                <div class="booking-agreement">
+
+                    <input type="checkbox"
+                           id="bookingAgreement">
+
+                    <label for="bookingAgreement">
+
+                        I agree that if my ad is rejected for policy
+                        violations, my money is strictly non-refundable
+                        and forfeited.
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- PAYMENT BUTTON -->
+                <button type="button"
+                        class="payment-button">
+
+                    Proceed to Secure Payment &amp; Submit
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

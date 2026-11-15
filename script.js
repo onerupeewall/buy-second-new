@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // यह कोड मोबाइल स्क्रीन के हिसाब से डेस्कटॉप व्यू को पूरी तरह फिट कर देगा
+    // यह कोड मोबाइल स्क्रीन की चौड़ाई नापकर डेस्कटॉप व्यू को अपने आप पूरी तरह फिट कर देगा
     const viewportMeta = document.querySelector('meta[name="viewport"]');
     if (viewportMeta) {
         const screenWidth = window.innerWidth;
@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const title = document.getElementById("popupTitle");
     const closeButton = document.getElementById("popupClose");
 
-    // बाकी आपका सारा पुराना जावास्क्रिप्ट कोड यहीं रहेगा...
     // OPEN POPUP
     function openPopup(name) {
         title.textContent = name;

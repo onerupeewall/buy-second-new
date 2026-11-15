@@ -8,8 +8,10 @@ body {
     background: #000;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 1200px; 
+    width: 1200px;
+    margin: 0 auto;
 }
+
 /* MAIN CONTAINER */
 .container {
     width: 100%;
@@ -239,120 +241,4 @@ body {
 /* EMPTY POPUP CONTENT */
 .popup-content {
     min-height: 180px;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
-
-    .container {
-        padding: 0 13px 25px;
-    }
-
-    .header {
-        min-height: 89px;
-        justify-content: flex-start;
-        gap: 12px;
-    }
-
-    .logo {
-        font-size: 29px;
-    }
-
-    .nav {
-        gap: 10px;
-    }
-
-        .nav a {
-            font-size: 16px;
-        }
-
-        .nav .follow {
-            padding: 8px 15px;
-            font-size: 15px;
-        }
-
-    .timing {
-        font-size: 23px;
-        margin: 25px 0;
-    }
-
-    .warning {
-        padding: 16px 19px;
-        font-size: 18px;
-        margin-bottom: 24px;
-    }
-
-    .hero {
-        padding: 13px 10px;
-        border-radius: 17px;
-        border-width: 3px;
-        margin-bottom: 23px;
-    }
-
-    .active-row {
-        padding: 19px 26px;
-        font-size: 22px;
-        border-radius: 15px;
-        margin-bottom: 23px;
-    }
-
-    .buy-button {
-        padding: 25px 10px;
-        font-size: 26px;
-        margin-bottom: 23px;
-    }
-
-    .stats {
-        padding: 17px 20px;
-        font-size: 22px;
-        border-radius: 16px;
-        margin-bottom: 23px;
-    }
-
-    .seats {
-        font-size: 23px;
-    }
-
-    .popup-overlay {
-        padding: 15px;
-    }
-
-    .popup-box {
-        padding: 25px 20px;
-        border-radius: 20px;
-        max-height: 85vh;
-    }
-
-    .popup-title {
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-
-    .popup-close {
-        top: 19px;
-        right: 19px;
-        font-size: 31px;
-    }
-}
-
-/* SMALL MOBILE */
-@media (max-width: 380px) {
-
-    .logo {
-        font-size: 25px;
-    }
-
-    .nav a {
-        font-size: 14px;
-    }
-
-    .stats {
-        font-size: 18px;
-        padding: 15px 12px;
-    }
-
-    .active-row {
-        font-size: 19px;
-        padding: 17px;
-    }
 }

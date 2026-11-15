@@ -1,64 +1,70 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: #000;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /* MAIN CONTAINER */
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
-    padding: 0 20px 30px;
+    margin: 0 auto;
+    padding: 0 clamp(8px, 1.7vw, 20px) 30px;
 }
 
 /* HEADER */
 .header {
-    min-height: 90px;
+    min-height: clamp(48px, 7.5vw, 90px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 6px;
     border-bottom: 1px solid #26303d;
-    overflow-x: auto;
-    scrollbar-width: none;
+    width: 100%;
 }
 
-    .header::-webkit-scrollbar {
-        display: none;
-    }
-
 .logo {
-    font-size: 60px;
+    font-size: clamp(20px, 5vw, 60px);
     font-weight: bold;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    gap: 14px;
+    justify-content: flex-end;
+    gap: clamp(4px, 1.2vw, 14px);
     white-space: nowrap;
+    min-width: 0;
 }
 
     .nav a {
         color: #aab0bc;
         text-decoration: none;
-        font-size: 17px;
+        font-size: clamp(7px, 1.42vw, 17px);
     }
 
     .nav .follow {
         background: #10b981;
         color: white;
-        padding: 9px 18px;
+        padding: clamp(5px, 0.75vw, 9px) clamp(7px, 1.5vw, 18px);
         border-radius: 7px;
         font-weight: bold;
     }
@@ -67,9 +73,9 @@ body {
 .timing {
     text-align: center;
     color: #ff4149;
-    font-size: 25px;
+    font-size: clamp(12px, 2.1vw, 25px);
     font-weight: bold;
-    margin: 26px 0 36px;
+    margin: clamp(12px, 2.2vw, 26px) 0 clamp(17px, 3vw, 36px);
 }
 
 /* WARNING */
@@ -78,11 +84,12 @@ body {
     border: 1px solid #29364c;
     border-left: 7px solid #f5a000;
     border-radius: 12px;
-    padding: 22px 25px;
+    padding: clamp(10px, 1.85vw, 22px) clamp(11px, 2.1vw, 25px);
     color: #d1d5db;
-    font-size: 25px;
+    font-size: clamp(12px, 2.1vw, 25px);
     line-height: 1.5;
-    margin-bottom: 36px;
+    margin-bottom: clamp(17px, 3vw, 36px);
+    overflow-wrap: break-word;
 }
 
     .warning strong {
@@ -91,10 +98,11 @@ body {
 
 /* HERO BANNER */
 .hero {
+    width: 100%;
     border: 4px solid #e2bd28;
     border-radius: 15px;
-    padding: 10px 5px;
-    margin-bottom: 25px;
+    padding: clamp(4px, 0.85vw, 10px) clamp(2px, 0.42vw, 5px);
+    margin-bottom: clamp(12px, 2.1vw, 25px);
     box-shadow: 0 0 15px rgba(255, 190, 0, 0.12);
 }
 
@@ -110,12 +118,13 @@ body {
 .active-row {
     background: #141b28;
     border-radius: 16px;
-    padding: 20px 25px;
+    padding: clamp(10px, 1.67vw, 20px) clamp(10px, 2.1vw, 25px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 23px;
-    margin-bottom: 35px;
+    gap: 8px;
+    font-size: clamp(11px, 1.92vw, 23px);
+    margin-bottom: clamp(17px, 2.9vw, 35px);
 }
 
 .no-slots {
@@ -125,21 +134,22 @@ body {
 .active-link {
     color: #3886ff;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 /* BUY BUTTON */
 .buy-button {
     display: block;
     width: 100%;
-    padding: 27px 15px;
+    padding: clamp(13px, 2.25vw, 27px) 15px;
     background: linear-gradient(110deg, #2866ec, #4085f6);
     border-radius: 60px;
     text-align: center;
     color: white;
     text-decoration: none;
-    font-size: 27px;
+    font-size: clamp(14px, 2.25vw, 27px);
     font-weight: bold;
-    margin-bottom: 35px;
+    margin-bottom: clamp(17px, 2.9vw, 35px);
     box-shadow: 0 10px 25px rgba(35, 100, 240, 0.25);
     transition: 0.2s;
 }
@@ -154,12 +164,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
     background: #0c1018;
     border: 1px solid #26354a;
     border-radius: 17px;
-    padding: 19px 25px;
-    margin-bottom: 35px;
-    font-size: 23px;
+    padding: clamp(10px, 1.58vw, 19px) clamp(9px, 2.1vw, 25px);
+    margin-bottom: clamp(17px, 2.9vw, 35px);
+    font-size: clamp(10px, 1.92vw, 23px);
 }
 
     .stats strong {
@@ -169,13 +180,13 @@ body {
 .visitors,
 .followers {
     color: #26baff;
-    margin-left: 8px;
+    margin-left: 5px;
 }
 
 /* AVAILABLE SEATS */
 .seats {
     text-align: center;
-    font-size: 25px;
+    font-size: clamp(11px, 2.08vw, 25px);
     margin: 0 0 35px;
 }
 
@@ -241,4 +252,22 @@ body {
 /* EMPTY POPUP CONTENT */
 .popup-content {
     min-height: 180px;
+}
+
+/* MOBILE POPUP */
+@media (max-width: 600px) {
+    .popup-box {
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    .popup-title {
+        font-size: 21px;
+    }
+
+    .popup-close {
+        top: 15px;
+        right: 17px;
+        font-size: 29px;
+    }
 }

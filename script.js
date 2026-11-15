@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // यह कोड मोबाइल स्क्रीन की चौड़ाई नापकर डेस्कटॉप व्यू को अपने आप पूरी तरह फिट कर देगा
-    const viewportMeta = document.querySelector('meta[name="viewport"]');
-    if (viewportMeta) {
-        const screenWidth = window.innerWidth;
-        const targetWidth = 1200;
-        const scale = screenWidth / targetWidth;
-        viewportMeta.setAttribute('content', 'width=' + targetWidth + ', initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=no');
-    }
-
     const overlay = document.getElementById("popupOverlay");
     const title = document.getElementById("popupTitle");
     const closeButton = document.getElementById("popupClose");
+
+    // SAFETY CHECK
+    if (!overlay || !title || !closeButton) {
+        return;
+    }
 
     // OPEN POPUP
     function openPopup(name) {
@@ -45,16 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // MY ACTIVE CAMPAIGN
-    document.querySelector(".active-link").addEventListener("click", function (e) {
-        e.preventDefault();
-        openPopup("My Active Campaign");
-    });
+    const activeLink = document.querySelector(".active-link");
+
+    if (activeLink) {
+        activeLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            openPopup("My Active Campaign");
+        });
+    }
 
     // BUY YOUR SLOT
-    document.querySelector(".buy-button").addEventListener("click", function (e) {
-        e.preventDefault();
-        openPopup("Buy Your Slot");
-    });
+    const buyButton = document.querySelector(".buy-button");
+
+    if (buyButton) {
+        buyButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            openPopup("Buy Your Slot");
+        });
+    }
 
     // CLOSE BUTTON
     closeButton.addEventListener("click", closePopup);

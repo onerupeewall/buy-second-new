@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Yeh code poori screen ko desktop ki tarah fit kar dega
+    const viewportMeta = document.querySelector('meta[name="viewport"]');
+    if (viewportMeta) {
+        const scale = window.innerWidth / 1200;
+        viewportMeta.setAttribute('content', 'width=1200, initial-scale=' + scale);
+    }
+
     const overlay = document.getElementById("popupOverlay");
     const title = document.getElementById("popupTitle");
     const closeButton = document.getElementById("popupClose");

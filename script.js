@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Yeh code poori screen ko desktop ki tarah fit kar dega
+    // यह कोड मोबाइल स्क्रीन के हिसाब से डेस्कटॉप व्यू को पूरी तरह फिट कर देगा
     const viewportMeta = document.querySelector('meta[name="viewport"]');
     if (viewportMeta) {
-        const scale = window.innerWidth / 1200;
-        viewportMeta.setAttribute('content', 'width=1200, initial-scale=' + scale);
+        const screenWidth = window.innerWidth;
+        const targetWidth = 1200;
+        const scale = screenWidth / targetWidth;
+        viewportMeta.setAttribute('content', 'width=' + targetWidth + ', initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=no');
     }
 
     const overlay = document.getElementById("popupOverlay");
     const title = document.getElementById("popupTitle");
     const closeButton = document.getElementById("popupClose");
 
+    // बाकी आपका सारा पुराना जावास्क्रिप्ट कोड यहीं रहेगा...
     // OPEN POPUP
     function openPopup(name) {
         title.textContent = name;

@@ -26,6 +26,21 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
+    // Check session on page load (Handles redirect back from Google OAuth)
+    supabaseClient.auth.getSession().then(({ data: { session } }) => {
+        if (session) {
+            updateAuthUI(session);
+            if (window.location.hash && window.location.hash.includes('access_token')) {
+                openPopup("Buy Your Slot");
+            }
+        }
+    });
+
+    // Listen for real-time auth state changes
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+        updateAuthUI(session);
+    });
+
     // Google Login Trigger
     if (googleLoginBtn) {
         googleLoginBtn.addEventListener("click", async function () {

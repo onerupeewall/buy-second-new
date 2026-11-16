@@ -9,14 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const target = tab.dataset.tab;
 
+            // Remove previous active tab
             tabs.forEach(function (item) {
                 item.classList.remove("active");
             });
 
+            // Hide previous content
             contents.forEach(function (content) {
                 content.classList.remove("active");
             });
 
+            // Activate selected tab
             tab.classList.add("active");
 
             const selectedContent = document.getElementById(target);

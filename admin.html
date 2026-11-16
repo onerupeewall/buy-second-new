@@ -15,17 +15,43 @@
             <h2>🛠 Secure Management Dashboard</h2>
 
             <div class="header-actions">
-                <button class="logout-btn">🔒 Logout</button>
+                <button class="logout-btn" type="button">🔒 Logout</button>
                 <a href="../index.html" class="website-btn">← Go to Website</a>
             </div>
         </header>
 
         <!-- MAINTENANCE CONTROL -->
         <section class="maintenance-section">
-            <h3>🛠 Maintenance Control</h3>
+
+            <h3>🛠 Maintenance Control:</h3>
+
+            <select class="maintenance-select" aria-label="Select section">
+                <option>Booking Form</option>
+                <option>Billboard</option>
+            </select>
+
+            <select class="maintenance-time" aria-label="Select duration">
+                <option>5 Minutes</option>
+                <option>10 Minutes</option>
+                <option>15 Minutes</option>
+                <option>20 Minutes</option>
+                <option>25 Minutes</option>
+                <option>30 Minutes</option>
+                <option>35 Minutes</option>
+                <option>40 Minutes</option>
+                <option>45 Minutes</option>
+                <option>50 Minutes</option>
+                <option>55 Minutes</option>
+                <option>60 Minutes</option>
+            </select>
+
+            <button class="maintenance-active" type="button" disabled>
+                Active
+            </button>
+
         </section>
 
-        <!-- ADMIN NAVIGATION -->
+        <!-- NAVIGATION TABS -->
         <nav class="admin-tabs">
 
             <button class="tab-btn active" data-tab="pending">
@@ -46,24 +72,94 @@
 
         </nav>
 
-        <!-- TAB CONTENT -->
-
+        <!-- CONTENT -->
         <main class="admin-content">
 
+            <!-- PENDING REQUESTS -->
             <section class="tab-content active" id="pending">
+
                 <h3>Pending Requests</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Token (#ID)</th>
+                                <th>User Account</th>
+                                <th>Brand / Title</th>
+                                <th>Booking Date</th>
+                                <th>Duration</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
             </section>
 
+            <!-- CAMPAIGN DETAILS -->
             <section class="tab-content" id="campaign">
+
                 <h3>Campaign Details</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Token (#ID)</th>
+                                <th>Brand / Title</th>
+                                <th>Total Runs</th>
+                                <th>Duration</th>
+                                <th>Target URL</th>
+                                <th>Media File</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
             </section>
 
+            <!-- LIVE SCREEN PLAY -->
             <section class="tab-content" id="live">
+
                 <h3>Live Screen Play</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Brand Name</th>
+                                <th>Scheduled Time</th>
+                                <th>Duration</th>
+                                <th>Live Status</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
             </section>
 
+            <!-- USER RECORDS & ARCHIVE -->
             <section class="tab-content" id="users">
+
                 <h3>User Records &amp; Archive</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S.No.</th>
+                                <th>User Account (Email / ID)</th>
+                                <th>Total Booked Records</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
             </section>
 
         </main>
@@ -71,5 +167,6 @@
     </div>
 
     <script src="admin.js"></script>
+
 </body>
 </html>

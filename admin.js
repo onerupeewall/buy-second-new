@@ -1,3 +1,8 @@
+// SUPABASE CONNECTION (Apna URL aur Key yahan daalna)
+const SUPABASE_URL = "https://vsdunnvqtteqotjuinki.supabase.co";
+const SUPABASE_KEY = "sb_publishable_xLAX65yZ4ozYB2MkuYDDFA_fwxFlX-p";
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const tabs = document.querySelectorAll(".tab-btn");

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Management Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- HEADER -->
+        <header class="admin-header">
+            <h2>🛠 Secure Management Dashboard</h2>
+
+            <div class="header-actions">
+                <button class="logout-btn">🔒 Logout</button>
+                <a href="../index.html" class="website-btn">← Go to Website</a>
+            </div>
+        </header>
+
+        <!-- MAINTENANCE CONTROL -->
+        <section class="maintenance-section">
+            <h3>🛠 Maintenance Control</h3>
+        </section>
+
+        <!-- ADMIN NAVIGATION -->
+        <nav class="admin-tabs">
+
+            <button class="tab-btn active" data-tab="pending">
+                Pending Requests ⏳
+            </button>
+
+            <button class="tab-btn" data-tab="campaign">
+                Campaign Details ✅
+            </button>
+
+            <button class="tab-btn" data-tab="live">
+                Live Screen Play 📺
+            </button>
+
+            <button class="tab-btn" data-tab="users">
+                User Records &amp; Archive 📂
+            </button>
+
+        </nav>
+
+        <!-- TAB CONTENT -->
+
+        <main class="admin-content">
+
+            <section class="tab-content active" id="pending">
+                <h3>Pending Requests</h3>
+            </section>
+
+            <section class="tab-content" id="campaign">
+                <h3>Campaign Details</h3>
+            </section>
+
+            <section class="tab-content" id="live">
+                <h3>Live Screen Play</h3>
+            </section>
+
+            <section class="tab-content" id="users">
+                <h3>User Records &amp; Archive</h3>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.admin-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* HEADER */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-bottom: 1px solid #1e293b;
+}
+
+    .admin-header h2 {
+        color: #22c7f5;
+        font-size: 16px;
+    }
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+    .header-actions button,
+    .header-actions a {
+        border: none;
+        border-radius: 5px;
+        padding: 7px 10px;
+        font-size: 11px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
+.logout-btn {
+    background: #ef4444;
+}
+
+.website-btn {
+    background: #2563eb;
+}
+
+/* MAINTENANCE */
+
+.maintenance-section {
+    margin: 15px 0;
+    padding: 15px;
+    background: #0d121c;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+}
+
+    .maintenance-section h3 {
+        color: #fbbf24;
+        font-size: 13px;
+    }
+
+/* TABS */
+
+.admin-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.tab-btn {
+    padding: 9px 13px;
+    border: none;
+    border-radius: 5px;
+    background: #151c29;
+    color: #9ca3af;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .tab-btn.active {
+        background: #2563eb;
+        color: white;
+    }
+
+/* CONTENT */
+
+.admin-content {
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+    background: #0d121c;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    padding: 16px;
+    min-height: 75px;
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .tab-content h3 {
+        color: #fbbf24;
+        font-size: 14px;
+    }
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .admin-header {
+        align-items: flex-start;
+    }
+
+        .admin-header h2 {
+            font-size: 14px;
+        }
+
+    .admin-tabs {
+        gap: 7px;
+    }
+
+    .tab-btn {
+        font-size: 10px;
+        padding: 9px 10px;
+    }
+
+    .maintenance-section {
+        padding: 12px;
+    }
+}
